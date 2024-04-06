@@ -10,12 +10,6 @@ import (
 )
 
 func GetContryName(countryKey string) string {
-	// 尝试直接从ISO代码获取国旗Emoji和中文名称
-	if flag, ok := model.CountryFlag[countryKey]; ok {
-		if name, ok := model.CountryChineseName[countryKey]; ok {
-			return flag + " " + name // 将国旗Emoji和国家名称结合
-		}
-	}
 	// 创建一个切片包含所有的国家映射
 	countryMaps := []map[string]string{
 		model.CountryFlag,
@@ -43,13 +37,26 @@ func GetContryName(countryKey string) string {
 			for _, v := range key {
 				// 如果匹配到了国家
 				if country, ok := countryMap[strings.ToUpper(v)]; ok {
+					// 尝试获取国家对应的国旗Emoji
+					if flag, flagOk := model.CountryFlag[country]; flagOk {
+						// 如果找到了国旗Emoji，则将它添加到国家名称前面
+						return flag + " " + country
+					}
 					return country
 				}
 			}
-		}
-		for k, v := range countryMap {
-			if strings.Contains(countryKey, k) {
-				return v
+		} else if i == 0 { // 如果当前映射是CountryFlag，跳过不处理
+			continue
+		} else {
+			for k, v := range countryMap {
+				if strings.Contains(countryKey, k) {
+					// 尝试获取国家对应的国旗Emoji
+					if flag, flagOk := model.CountryFlag[k]; flagOk {
+						// 如果找到了国旗Emoji，则将它添加到国家名称前面
+						return flag + " " + v
+					}
+					return v
+				}
 			}
 		}
 	}
