@@ -106,6 +106,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+      - 🚀 节点选择
       - <countries>
       - 🚀 手动切换
   - name: 🍎 苹果服务
@@ -198,15 +199,15 @@ rules:
   - DOMAIN-SUFFIX,sg0.cc,🚀 节点选择
   - DOMAIN-SUFFIX,nodeseek.com,🚀 节点选择
   - DOMAIN-SUFFIX,hostloc.com,🚀 节点选择
-  - DOMAIN-SUFFIX,dlandroid.rcv.sandai.net,🇯🇵 日本节点
-  - DOMAIN-SUFFIX,hub5idx.v6.shub.sandai.net,🇯🇵 日本节点
-  - DOMAIN-SUFFIX,hub5pn.wap.sandai.net,🇯🇵 日本节点
-  - DOMAIN-SUFFIX,hub5pnc.sandai.net,🇯🇵 日本节点
-  - DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net,🇯🇵 日本节点
-  - DOMAIN-SUFFIX,hubciddata.sandai.net,🇯🇵 日本节点
-  - DOMAIN-KEYWORD,mypikpak,🇯🇵 日本节点
-  - DOMAIN-KEYWORD,pikpak,🇯🇵 日本节点
-  - DOMAIN-KEYWORD,pikpakdrive,🇯🇵 日本节点
+  - DOMAIN-SUFFIX,dlandroid.rcv.sandai.net,日本(JP)
+  - DOMAIN-SUFFIX,hub5idx.v6.shub.sandai.net,日本(JP)
+  - DOMAIN-SUFFIX,hub5pn.wap.sandai.net,日本(JP)
+  - DOMAIN-SUFFIX,hub5pnc.sandai.net,日本(JP)
+  - DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net,日本(JP)
+  - DOMAIN-SUFFIX,hubciddata.sandai.net,日本(JP)
+  - DOMAIN-KEYWORD,mypikpak,日本(JP)
+  - DOMAIN-KEYWORD,pikpak,日本(JP)
+  - DOMAIN-KEYWORD,pikpakdrive,日本(JP)
   - DOMAIN-SUFFIX,imgur.com,🚀 节点选择
   - DOMAIN-SUFFIX,imgurinc.com,🚀 节点选择
   - DOMAIN-SUFFIX,cf-ipfs.com,🚀 节点选择
@@ -2158,8 +2159,8 @@ rules:
   - IP-CIDR,104.154.127.126/32,🎵 Spotify,no-resolve
   - IP-CIDR,35.186.224.47/32,🎵 Spotify,no-resolve
   - PROCESS-NAME,com.spotify.music,🎵 Spotify
-  - DOMAIN-SUFFIX,bard.google.com,🇺🇲 美国节点
-  - DOMAIN-SUFFIX,claude.ai,🇺🇲 美国节点
+  - DOMAIN-SUFFIX,bard.google.com,美国(US)
+  - DOMAIN-SUFFIX,claude.ai,美国(US)
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
