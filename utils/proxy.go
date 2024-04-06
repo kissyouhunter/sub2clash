@@ -37,26 +37,13 @@ func GetContryName(countryKey string) string {
 			for _, v := range key {
 				// 如果匹配到了国家
 				if country, ok := countryMap[strings.ToUpper(v)]; ok {
-					// 尝试获取国家对应的国旗Emoji
-					if flag, flagOk := model.CountryFlag[country]; flagOk {
-						// 如果找到了国旗Emoji，则将它添加到国家名称前面
-						return flag + " " + country
-					}
 					return country
 				}
 			}
-		} else if i == 0 { // 如果当前映射是CountryFlag，跳过不处理
-			continue
-		} else {
-			for k, v := range countryMap {
-				if strings.Contains(countryKey, k) {
-					// 尝试获取国家对应的国旗Emoji
-					if flag, flagOk := model.CountryFlag[k]; flagOk {
-						// 如果找到了国旗Emoji，则将它添加到国家名称前面
-						return flag + " " + v
-					}
-					return v
-				}
+		}
+		for k, v := range countryMap {
+			if strings.Contains(countryKey, k) {
+				return v
 			}
 		}
 	}
