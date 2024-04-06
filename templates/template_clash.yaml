@@ -5,13 +5,13 @@ mode: Rule
 log-level: info
 proxies:
 proxy-groups:
-  - name: 节点选择
+  - name: 🚀 节点选择
     type: select
     proxies:
       - <countries>
-      - 手动切换
+      - 🚀 手动切换
       - DIRECT
-  - name: 手动切换
+  - name: 🚀 手动切换
     type: select
     proxies:
       - ⚖️ 负载均衡-轮询
@@ -27,13 +27,14 @@ proxy-groups:
       - <all>
   - name: 💻 RDP
     type: select
+    proxies:
       - <all>
   - name: 📲 电报消息
     type: select
     proxies:
       - <countries>
-      - 节点选择
-      - 手动切换
+      - 🚀 节点选择
+      - 🚀 手动切换
       - DIRECT
   - name: 📹 油管视频
     type: select
@@ -42,7 +43,6 @@ proxy-groups:
       - ⚖️ 负载均衡-轮询
       - ⚖️ 负载均衡-散列
       - ⛓️ 链式代理
-      - CF节点
       - <all>
   - name: 🎥 奈飞节点
     type: select
@@ -106,7 +106,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 🚀 节点选择
       - <countries>
       - 🚀 手动切换
   - name: 🍎 苹果服务
